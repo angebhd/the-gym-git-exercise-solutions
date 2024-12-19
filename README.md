@@ -394,5 +394,162 @@ git push --set-upstream origin ft/service-redesign
     To https://github.com/angebhd/the-gym-git-exercise.git
        0062aac..fa49b5f  ft/service-redesign -> ft/service-redesign
     branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+```
+
+## Bundle 3
+### Exercise 1
+
+```bash
+git checkout main
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+
+git checkout -b ft/team-page
+    Switched to a new branch 'ft/team-page'
+
+git add team.html
+git commit -m "Creating team.html"
+    [ft/team-page 8bb45ac] Creating team.html
+     1 file changed, 11 insertions(+)
+     create mode 100644 team.html
+
+git push --set-upstream origin ft/team-page
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 438 bytes | 438.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: 
+    remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-exercise/pull/new/ft/team-page
+    remote: 
+    To https://github.com/angebhd/the-gym-git-exercise.git
+     * [new branch]      ft/team-page -> ft/team-page
+    branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+git checkout main
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+
+git checkout -b ft/contact-page
+    Switched to a new branch 'ft/contact-page'
+
+git checkout ft/team-page 
+    Switched to branch 'ft/team-page'
+    Your branch is up to date with 'origin/ft/team-page'.
+
+git log
+    commit 8bb45acc333f078ef8b9418d0307758896c30309 (HEAD -> ft/team-page, origin/ft/team-page)
+    Author: Asifiwe Buhendwa <mickaelbhd@gmail.com>
+    Date:   Thu Dec 19 17:43:34 2024 +0200
+
+        Creating team.html
+
+    commit 6cc8099a087195598fb0e40017d2df342f643db8 (origin/main, origin/HEAD, main, ft/contact-page)
+    Author: Asifiwe Buhendwa <mickaelbhd@gmail.com>
+    Date:   Thu Dec 19 16:51:52 2024 +0200
+
+        Redesigning services.html from main branch
+
+    commit 0b616a5c36d8f3afd59d9e292b2bd2f2cd9bd36f
+    Merge: fff9b52 4362342
+    Author: Ange BUHENDWA <mickaelbhd@gmail.com>
+    Date:   Thu Dec 19 16:20:06 2024 +0200
+
+        Merge pull request #1 from angebhd/ft/bundle-2
+
+        Bundle 2 Exercise 1
+git checkout ft/contact-page
+    Switched to branch 'ft/contact-page'
+
+git cherry-pick 8bb45acc333f078ef8b9418d0307758896c30309
+    [ft/contact-page 6457bbb] Creating team.html
+     Date: Thu Dec 19 17:43:34 2024 +0200
+     1 file changed, 11 insertions(+)
+     create mode 100644 team.html
+
+touch contact.html
+git add contact.html
+git commit -m "Adding contact page"
+    [ft/contact-page 5c01582] Adding contact page
+     1 file changed, 11 insertions(+)
+     create mode 100644 contact.html
+
+git push --set-upstream origin ft/contact-page 
+    Enumerating objects: 7, done.
+    Counting objects: 100% (7/7), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (6/6), done.
+    Writing objects: 100% (6/6), 715 bytes | 715.00 KiB/s, done.
+    Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+    remote: 
+    remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-exercise/pull/new/ft/contact-page
+    remote: 
+    To https://github.com/angebhd/the-gym-git-exercise.git
+     * [new branch]      ft/contact-page -> ft/contact-page
+    branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+git checkout -b ft/faq-page
+    Switched to a new branch 'ft/faq-page'
+
+touch faq.html
+git add faq.html
+git commit -m "Creating faq page"
+    [ft/faq-page 8f7a61f] Creating faq page
+     1 file changed, 11 insertions(+)
+     create mode 100644 faq.html
+
+git push --set-upstream origin ft/faq-page 
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 431 bytes | 431.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: 
+    remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-exercise/pull/new/ft/faq-page
+    remote: 
+    To https://github.com/angebhd/the-gym-git-exercise.git
+     * [new branch]      ft/faq-page -> ft/faq-page
+    branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+git checkout ft/team-page      
+    Switched to branch 'ft/team-page'
+    Your branch is up to date with 'origin/ft/team-page'.
+
+git status
+    On branch ft/team-page
+    Your branch is up to date with 'origin/ft/team-page'.
+
+    nothing to commit, working tree clean
+
+git revert 8bb45acc333f078ef8b9418d0307758896c30309
+    [ft/team-page ae9d415] Revert "Creating team.html"
+     1 file changed, 11 deletions(-)
+     delete mode 100644 team.html
+git status
+    On branch ft/team-page
+    Your branch is ahead of 'origin/ft/team-page' by 1 commit.
+      (use "git push" to publish your local commits)
+
+    nothing to commit, working tree clean
+git push --set-upstream origin ft/team-page 
+    Enumerating objects: 3, done.
+    Counting objects: 100% (3/3), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (2/2), 260 bytes | 260.00 KiB/s, done.
+    Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To https://github.com/angebhd/the-gym-git-exercise.git
+       8bb45ac..ae9d415  ft/team-page -> ft/team-page
+    branch 'ft/team-page' set up to track 'origin/ft/team-page'.
     
 ```
