@@ -553,3 +553,5 @@ git push --set-upstream origin ft/team-page
     branch 'ft/team-page' set up to track 'origin/ft/team-page'.
     
 ```
+
+### Exercise 3
