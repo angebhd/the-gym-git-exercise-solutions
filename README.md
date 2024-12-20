@@ -555,3 +555,92 @@ git push --set-upstream origin ft/team-page
 ```
 
 ### Exercise 3
+
+```bash
+git branch
+      dev
+      ft/bundle-2
+      ft/contact-page
+      ft/faq-page
+      ft/service-redesign
+    * ft/team-page
+      main
+git checkout ft/faq-page 
+    Switched to branch 'ft/faq-page'
+    Your branch is up to date with 'origin/ft/faq-page'.
+git checkout -b ft/home-page-redesign
+    Switched to a new branch 'ft/home-page-redesign'
+git checkout main       
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+    git status 
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+    	modified:   home.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+git add home.html 
+git commit -m "Modifications on home page"
+    [main 1f6f020] Modifications on home page
+     1 file changed, 1 insertion(+), 1 deletion(-)
+git checkout ft/home-page-redesign 
+    Switched to branch 'ft/home-page-redesign'
+git rebase main
+    Successfully rebased and updated refs/heads/ft/home-page-redesign.
+git log
+    commit 4408013574300be22de80666b09091f163b8cd0d (HEAD -> ft/home-page-redesign)
+    Author: Asifiwe Buhendwa <mickaelbhd@gmail.com>
+    Date:   Thu Dec 19 17:59:44 2024 +0200
+
+        Creating faq page
+
+    commit 984c3c4edb5228b3e57e115fdbb138678f61af71
+    Author: Asifiwe Buhendwa <mickaelbhd@gmail.com>
+    Date:   Thu Dec 19 17:54:16 2024 +0200
+
+        Adding contact page
+
+    commit 1762c98876b61121f959d8dabcf755937ba0ff1d
+    Author: Asifiwe Buhendwa <mickaelbhd@gmail.com>
+    Date:   Thu Dec 19 17:43:34 2024 +0200
+
+        Creating team.html
+
+    commit 1f6f020e132c4534430b45bf1554b35749cf6b35 (main)
+    Author: Asifiwe Buhendwa <mickaelbhd@gmail.com>
+    Date:   Fri Dec 20 11:35:30 2024 +0200
+
+        Modifications on home page
+git status        
+    On branch ft/home-page-redesign
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+    	modified:   home.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+git add home.html 
+git commit -m "Adding a paragraph to the home page"
+    [ft/home-page-redesign 2515104] Adding a paragraph to the home page
+     1 file changed, 2 insertions(+)
+git push --set-upstream origin ft/home-page-redesign 
+    Enumerating objects: 17, done.
+    Counting objects: 100% (17/17), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (15/15), done.
+    Writing objects: 100% (15/15), 1.57 KiB | 1.57 MiB/s, done.
+    Total 15 (delta 8), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (8/8), completed with 1 local object.
+    remote: 
+    remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting
+    remote:      https://github.com/angebhd/the-gym-git-exercise/pull/new/ft/home-page-redesign
+    remote: 
+    To https://github.com/angebhd/the-gym-git-exercise.git
+     * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+    branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+```
