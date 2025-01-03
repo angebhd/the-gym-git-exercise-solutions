@@ -554,7 +554,7 @@ git push --set-upstream origin ft/team-page
     
 ```
 
-### Exercise 3
+### Exercise 2
 
 ```bash
 git branch
@@ -642,5 +642,142 @@ git push --set-upstream origin ft/home-page-redesign
     To https://github.com/angebhd/the-gym-git-exercise.git
      * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
     branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+```
+
+## Bundle 4
+### Exercise 1
+
+```bash
+git status
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+    nothing to commit, working tree clean
+git remote add git-copy https://github.com/angebhd/the-gym-git-exercise-clone.git
+git remote
+    git-copy
+    origin
+git status
+    On branch main
+    Your branch is up to date with 'origin/main'.
+
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+git add home.html 
+git commit -m "Add home remote paragraph"
+    [main 6c89481] Add home remote paragraph
+     1 file changed, 1 insertion(+)
+git push origin
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 339 bytes | 169.00 KiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    To https://github.com/angebhd/the-gym-git-exercise.git
+       ddd2947..6c89481  main -> main
+git push git-copy
+    Enumerating objects: 24, done.
+    Counting objects: 100% (24/24), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (16/16), done.
+    Writing objects: 100% (24/24), 3.84 KiB | 982.00 KiB/s, done.
+    Total 24 (delta 12), reused 17 (delta 7), pack-reused 0
+    remote: Resolving deltas: 100% (12/12), done.
+    To https://github.com/angebhd/the-gym-git-exercise-clone.git
+     * [new branch]      main -> main
+
+```
+
+### Exercise 2
+
+```bash
+git checkout -b ft/footer
+    Switched to a new branch 'ft/footer'
+
+git status
+    On branch ft/footer
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+    	modified:   home.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+git add home.html 
+
+git commit -m "Adding footer to home page"
+    [ft/footer 61e6962] Adding footer to home page
+     1 file changed, 5 insertions(+), 1 deletion(-)
+
+git status
+    On branch ft/footer
+    nothing to commit, working tree clean
+
+git add home.html 
+
+git commit -m "Copyright to footer"
+    [ft/footer 7a1cf08] Copyright to footer
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+git push origin ft/footer 
+    Enumerating objects: 8, done.
+    Counting objects: 100% (8/8), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (6/6), done.
+    Writing objects: 100% (6/6), 636 bytes | 159.00 KiB/s, done.
+    Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+    remote: 
+    remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-exercise/pull/new/ft/footer
+    remote: 
+    To https://github.com/angebhd/the-gym-git-exercise.git
+     * [new branch]      ft/footer -> ft/footer
+
+git checkout main
+    Switched to branch 'main'
+    Your branch is up to date with 'origin/main'.
+
+git checkout -b ft/squashing
+    Switched to a new branch 'ft/squashing' 
+
+git merge --squash ft/footer 
+    Updating 6c89481..7a1cf08
+    Fast-forward
+    Squash commit -- not updating HEAD
+     home.html | 6 +++++-
+     1 file changed, 5 insertions(+), 1 deletion(-)
+
+git status 
+    On branch ft/squashing
+    Changes to be committed:
+      (use "git restore --staged <file>..." to unstage)
+    	modified:   home.html
+
+git commit -m "footer changes squashing"
+    [ft/squashing c48cdd4] footer changes squashing
+     1 file changed, 5 insertions(+), 1 deletion(-)
+
+git push origin ft/squashing 
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 377 bytes | 188.00 KiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote: 
+    remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-exercise/pull/new/ft/squashing
+    remote: 
+    To https://github.com/angebhd/the-gym-git-exercise.git
+     * [new branch]      ft/squashing -> ft/squashing
 
 ```
