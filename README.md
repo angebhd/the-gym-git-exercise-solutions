@@ -868,6 +868,42 @@ git push origin new-feature
 
 ```bash
 
+git checkout -b 'bug-fix'
+    Switched to a new branch 'bug-fix'
 
+git status
+    On branch bug-fix
+    Changes not staged for commit:
+      (use "git add/rm <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+    	deleted:    index-4.html
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+    	Contact.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+git add Contact.html 
+
+git commit -m "Changing index-4 to contact"
+    [bug-fix fe0fa86] Changing index-4 to contact
+     1 file changed, 204 insertions(+)
+     create mode 100644 Contact.html
+
+git push origin bug-fix 
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 2.51 KiB | 641.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: 
+    remote: Create a pull request for 'bug-fix' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-cafe-exercise/pull/new/bug-fix
+    remote: 
+    To https://github.com/angebhd/the-gym-git-cafe-exercise.git
+     * [new branch]      bug-fix -> bug-fix
 
 ```
