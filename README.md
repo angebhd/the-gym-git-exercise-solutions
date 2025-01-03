@@ -876,20 +876,15 @@ git status
     Changes not staged for commit:
       (use "git add/rm <file>..." to update what will be committed)
       (use "git restore <file>..." to discard changes in working directory)
-    	deleted:    index-4.html
-
-    Untracked files:
-      (use "git add <file>..." to include in what will be committed)
-    	Contact.html
+    	modified:   index-4.html
 
     no changes added to commit (use "git add" and/or "git commit -a")
 
-git add Contact.html 
+git add index-4.html 
 
 git commit -m "Changing index-4 to contact"
     [bug-fix fe0fa86] Changing index-4 to contact
      1 file changed, 204 insertions(+)
-     create mode 100644 Contact.html
 
 git push origin bug-fix 
     Enumerating objects: 4, done.
@@ -907,3 +902,42 @@ git push origin bug-fix
      * [new branch]      bug-fix -> bug-fix
 
 ```
+
+### Exercise 3
+
+```bash
+git checkout -b 'phone-number-fix'
+    Switched to a new branch 'phone-number-fix'
+
+git status
+    On branch phone-number-fix
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+    	modified:   index-4.html
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+
+git add index-4.html 
+
+git commit -m "Changing phone number"
+    [phone-number-fix 6e952a0] Changing phone number
+     1 file changed, 1 insertion(+), 1 deletion(-)
+
+git push origin phone-number-fix 
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+    Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+    remote: 
+    remote: Create a pull request for 'phone-number-fix' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-cafe-exercise/pull/new/phone-number-fix
+    remote: 
+    To https://github.com/angebhd/the-gym-git-cafe-exercise.git
+     * [new branch]      phone-number-fix -> phone-number-fix
+
+```
+
