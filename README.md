@@ -821,4 +821,53 @@ git push
 ```
  Then create a PR
 
- 
+ ## Bundle 6
+
+ ### Exercise 1
+
+ ```bash
+git branch
+    * main
+
+git checkout -b new-feature
+    Switched to a new branch 'new-feature'
+
+git status
+    On branch new-feature
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+    	menu.html
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+git add menu.html 
+
+git commit -m "Adding menu page"
+    [new-feature b85d4e4] Adding menu page
+     1 file changed, 11 insertions(+)
+     create mode 100644 menu.html
+
+git push origin new-feature 
+    Enumerating objects: 4, done.
+    Counting objects: 100% (4/4), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 443 bytes | 443.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    remote: 
+    remote: Create a pull request for 'new-feature' on GitHub by visiting:
+    remote:      https://github.com/angebhd/the-gym-git-cafe-exercise/pull/new/new-feature
+    remote: 
+    To https://github.com/angebhd/the-gym-git-cafe-exercise.git
+     * [new branch]      new-feature -> new-feature
+
+ ```
+
+### Exercise 2
+
+```bash
+
+
+
+```
